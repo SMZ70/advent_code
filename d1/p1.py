@@ -8,7 +8,6 @@ if __name__ == "__main__":
   rotations: list[str]
   for r in rotations:
     dial = (dial + (1 if r.startswith("R") else -1) * int(r[1:])) % 100
-    print(dial)
     if dial == 0:
       password += 1
 
