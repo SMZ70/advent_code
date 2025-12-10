@@ -28,5 +28,4 @@ if __name__ == "__main__":
         G[r, c] += G[r - 1, c]
 
   total_timelines = G[n_rows, :].sum()
-  print(G[n_rows, :])
   print(total_timelines)
