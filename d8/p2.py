@@ -25,7 +25,7 @@ if __name__ == "__main__":
   circuits: list[set[int]] = [{n} for n in range(n_points)]
   last_jb: tuple[int, int]
   for _, n1, n2 in arcs:
-    already_connected = any(c for c in circuits if n1 in c and n2 in c)
+    already_connected = any(c for c in circuits if not ({n1, n2} - c))
     if already_connected:
       continue
     sel_circuits = [c for c in circuits if c.intersection({n1, n2})]
